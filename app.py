@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Home page - returns a simple message"""
-    return "Hello! This is a simple Flask app with CI/CD pipeline!"
+    return "Hello! This is a simple Flask app with CI/CD pipeline! staging test"
 
 @app.route('/health')
 def health():
@@ -32,3 +32,4 @@ def multiply_numbers(a, b):
 if __name__ == '__main__':
     # Run the app
     app.run(debug=True, host='0.0.0.0', port=5000)
+
