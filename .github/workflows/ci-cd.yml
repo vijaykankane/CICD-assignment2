@@ -86,8 +86,7 @@ jobs:
     name: Deploy to Production
     runs-on: ubuntu-latest
     needs: test  # Wait for tests to pass
-    if: github.event_name == 'release'  # Only run on release
-    
+    if: github.event_name == 'release' && needs.test.result == 'success'
     steps:
     # Step 1: Get the code
     - name: Checkout code
