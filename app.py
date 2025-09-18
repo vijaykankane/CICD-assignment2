@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Home page - returns a simple message"""
-    return "Hello! This is a simple Flask app with CI/CD pipeline! staging"
+    return "Hello! This is a simple Flask app with CI/CD pipeline! staging test"
 
 @app.route('/health')
 def health():
